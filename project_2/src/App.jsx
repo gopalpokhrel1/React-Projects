@@ -1,13 +1,13 @@
 
 import './App.css'
-import Navigation from './Components/Navigation'
+import Navigation from './Components/Navigation/Navigation'
 
 function App() {
-
+ 
 
   return (
     <>
-    <Navigation/>
+      <Navigation/>
     </>
   )
 }

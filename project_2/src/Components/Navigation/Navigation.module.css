@@ -1,0 +1,19 @@
+
+  
+  .container{
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 0rem 3rem;
+    background-color: red;
+  }
+  
+ .container ul{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+    font-size: 1.5rem;
+  }
