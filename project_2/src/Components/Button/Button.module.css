@@ -1,0 +1,37 @@
+.button{
+   
+   width: 15rem;
+   
+   padding: 0.5rem;
+   background-color: black;
+   color: white;
+   border-radius: 1rem;
+   font-size: 1rem;
+   border: none;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 1rem;
+
+   margin: 1rem;
+}
+
+.outline{
+    width: 100%;
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 1rem;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 1rem;
+   margin-bottom: 1rem;
+
+   
+}
+
