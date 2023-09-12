@@ -1,9 +1,14 @@
 import styled  from "styled-components"
 import { useState } from "react";
 
-export default function NumberSelector({select,setSelect}) {
+export default function NumberSelector({select,setSelect, err, setErr}) {
 
     const arrNumber = [1,2,3,4,5,6];
+
+    const handlerErr= (value)=>{
+      setSelect(value);
+      setErr('');
+    }
 
   return (
     <>
@@ -13,10 +18,11 @@ export default function NumberSelector({select,setSelect}) {
         arrNumber.map((value,i)=>
          <Box
          isSelected = {value=== select}
-         key={i} onClick={()=> setSelect(value)}>{value}</Box>)
+         key={i} onClick={()=>handlerErr(value)}>{value}</Box>)
        }
        </div>
         <p>Select Number</p>
+        <p style={{color:'red'}}>{err}</p>
 </SelectNumber>
     </>
   )

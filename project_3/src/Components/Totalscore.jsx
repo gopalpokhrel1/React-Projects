@@ -1,10 +1,13 @@
 import styled from 'styled-components'
 
-export default function Totalscore() {
+export default function Totalscore({score}) {
   return (
     <>
         <Scorecard>
-            <h1>0</h1>
+            <h1>{
+              score
+              }
+              </h1>
            <p>Total Score</p>
             </Scorecard>      
     </>

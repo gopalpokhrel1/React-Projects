@@ -1,23 +1,11 @@
 import { useState } from "react";
 import styled from "styled-components"
 
-export default function RoleDice({count, setCount}) {
+export default function RoleDice({roleDice, count}) {
  
    
 
-    const randomNumber = (min, max)=>{
-        return Math.floor(Math.random() * (max - min) + min);
-        
-
-    }
-
-    const roleDice = ()=>{
-        let random = randomNumber(1, 7);
-
-        setCount((prev)=> random);
-
-        
-    }
+   
 
 
 
