@@ -1,30 +1,28 @@
 import styled from "styled-components";
 import Box from "../Box/Box";
+import { BACKEND_URL } from "../../App";
 
-export default function Food() {
+export default function Food({ data_item: foods }) {
+
+    console.log(foods)
   return (
     <>
       <Container>
-        <div className="grid">
-          <div className="item">
-            <Box />
-          </div>
-          <div className="item">
-            <Box />
-          </div>
-          <div className="item">
-            <Box />
-          </div>
-          <div className="item">
-            <Box />
-          </div>
-          <div className="item">
-            <Box />
-          </div>
-          <div className="item">
-            <Box />
-          </div>
-        </div>
+      <div className="grid">
+        {foods?.map((value) => {
+          return (
+            <>
+             
+                <div className="item" >
+                  <Box key={value.name}  name= {value.name}  img = {BACKEND_URL + value.image} text={value.text} price={value.price} />
+
+                 
+                </div>
+             
+            </>
+          );
+        })}
+         </div>
       </Container>
     </>
   );
@@ -32,7 +30,7 @@ export default function Food() {
 
 const Container = styled.div`
   width: 100%;
-  height: 81.4vh;
+  height: calc(100vh - 8rem);
 
   padding: 1rem;
 
@@ -46,11 +44,9 @@ const Container = styled.div`
   overflow: auto;
 
   .grid {
-
     width: 80%;
 
-
-    margin:6rem auto 0rem auto;
+    margin: 6rem auto 0rem auto;
     display: grid;
 
     grid-gap: 1rem;
@@ -58,7 +54,6 @@ const Container = styled.div`
     grid-template-columns: repeat(auto-fit, minmax(340px, 340px));
 
     justify-content: center;
-
   }
 
   .item {

@@ -62,12 +62,19 @@
 .paragraph{
    
     background-color: red;
-    padding: 0.3rem;
+    width: 3rem;
+    height: 1.5rem;
     position: absolute;
     bottom: 1rem;
     right: 1rem;
     
     border-radius: 0.5rem;
-    font-size: 2rem;
+    
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    
 
 }

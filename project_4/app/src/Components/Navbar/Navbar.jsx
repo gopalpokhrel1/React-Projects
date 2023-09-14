@@ -1,6 +1,15 @@
 import styled from'styled-components'
 
-export default function Navbar() {
+
+export default function Navbar({data, item}) {
+
+  const handleSubmit = (e)=>{
+    data(e);
+    
+    
+  }
+ 
+
   return (
     <Nabbar>
       <div className="container">
@@ -8,7 +17,7 @@ export default function Navbar() {
             <h1>Food</h1>
         </div>
         <div className="input">
-            <input type="text" placeholder='Search' />
+            <input onChange={handleSubmit} type="text" placeholder='Search' />
         </div>
       </div>
 
@@ -55,12 +64,19 @@ input{
     width: 10rem;
     height: 1.5rem;
 
+    background-color: transparent;
+
+    border: 2px solid white;
+
     padding-left: 1rem;
 
     outline: none;
 
+    color: white;
+
     &::placeholder{
         font-size: 0.9rem;
+        color: white;
     }
 }
 
