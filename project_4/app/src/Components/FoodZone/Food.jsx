@@ -9,7 +9,7 @@ export default function Food({ data_item: foods }) {
     <>
       <Container>
       <div className="grid">
-        {foods?.map((value) => {
+        {foods ?.map((value) => {
           return (
             <>
              

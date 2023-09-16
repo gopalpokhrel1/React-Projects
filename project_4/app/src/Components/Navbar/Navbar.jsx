@@ -8,6 +8,10 @@ export default function Navbar({data, item}) {
     
     
   }
+
+  const onSubmit = (val)=>{
+     item(val);
+  }
  
 
   return (
@@ -23,10 +27,10 @@ export default function Navbar({data, item}) {
 
       <div className="menu">
         <ul>
-            <li>All</li>
-            <li>Breakfast</li>
-            <li>Lunch</li>
-            <li>Dinner</li>
+            <li onClick={()=> onSubmit('All')}>All</li>
+            <li onClick={()=> onSubmit('Breakfast')}>Breakfast</li>
+            <li onClick={()=> onSubmit('Lunch')}>Lunch</li>
+            <li onClick={()=> onSubmit('Dinner')}>Dinner</li>
         </ul>
       </div>
     </Nabbar>

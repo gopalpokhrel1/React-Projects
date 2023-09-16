@@ -55,6 +55,46 @@ fetchData();
 
  }, [])
 
+ const Filterdata = (val)=>{
+
+  if(val==='All'){
+     
+
+    setFilter(value);
+
+     
+  }
+
+  
+
+
+
+  else if(val==='Breakfast'){
+    const select = value ?.filter((value)=> value.type.toLowerCase().includes(val.toLowerCase()));
+
+    setFilter(select)
+
+    
+  }
+  else if(val==='Lunch'){
+    const select = value ?.filter((value)=> value.type.toLowerCase().includes(val.toLowerCase()));
+
+    setFilter(select)
+    
+  }
+  else if(val==='Dinner'){
+    const select = value ?.filter((value)=> value.type.toLowerCase().includes(val.toLowerCase()));
+
+    setFilter(select)
+
+  
+  }
+
+  
+
+  
+
+ }
  
 
  const showData = (e)=>{
@@ -62,7 +102,7 @@ fetchData();
    const search = e.target.value;
 
 
-   console.log(search)
+  
 
 
    if(search===""){
@@ -91,7 +131,7 @@ fetchData();
   
   return (
     <>
-       <Navbar  data={showData} />
+       <Navbar  data={showData}  item={Filterdata} />
 
 
        <Food  data_item={filter}/>
